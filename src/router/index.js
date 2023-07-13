@@ -1,1 +1,3 @@
-export * from "./AppRouter";
+
+export * from "./CalendarRouter";
+export * from "./AuthRouter";
