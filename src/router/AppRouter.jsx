@@ -14,9 +14,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <CalendarRouter />,
+
     children: calendarRoutes,
   },
 ]);
+
 export const AppRouter = () => {
   //const { status } = useCheckAuth();
   const status = "checking"; /* checking notAuth auth */
