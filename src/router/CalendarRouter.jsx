@@ -1,8 +1,9 @@
 import { Navigate, Outlet } from "react-router-dom";
+import { useAuthStore } from "../hooks";
 
 export const CalendarRouter = () => {
-  //const { status } = useCheckAuth();
-  //const status = "auth"; /* notAuth auth */
-  //if (status === "notAuth") return <Navigate to="/auth/login" />;
-  return <Outlet />;
+  const { status } = useAuthStore();
+  /* notAuthenticated authenticated */
+  if (status === "authenticated") return <Outlet />;
+  return <Navigate to="/auth/login" />;
 };
